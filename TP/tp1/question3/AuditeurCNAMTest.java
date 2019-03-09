@@ -122,4 +122,38 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
         assertEquals(" nom avec accent (é devient e) ? ", "chloe_c",
             auditeur1.login());
     }
+
+    public void test1()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("eliana", "najjar", "eliana123");
+        assertEquals("eliana_n", auditeur1.login());
+        assertEquals("eliana123", auditeur1.matricule());
+        assertEquals("eliana", auditeur1.nom());
+        assertEquals("najjar", auditeur1.prenom());
+    }
+
+    public void test2()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("sam", "najjar", "sam123");
+        assertEquals("Sam", auditeur1.login());
+        assertEquals("sam123", auditeur1.matricule());
+    }
+
+    public void test3()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("sam", "najjar", "sam123");
+        assertEquals("sam_n", auditeur1.login());
+        assertEquals("sam123", auditeur1.matricule());
+    }
+
+    public void test4()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("eliana", "najjar", "eliana12");
+        assertEquals("eliana_n", auditeur1.login());
+        assertEquals("eliana", auditeur1.matricule());
+    }
 }
+
+
+
+

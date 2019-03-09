@@ -21,8 +21,8 @@ public class Triangle {
      * Create a new triangle at default position with default color.
      */
     public Triangle() {
-        height = 30;
-        width = 40;
+        height = 40;
+        width = 60;
         xPosition = 50;
         yPosition = 15;
         color = "green";

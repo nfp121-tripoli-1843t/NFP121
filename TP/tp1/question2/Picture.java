@@ -20,14 +20,32 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle s;
+     private String color;
+    private boolean isVisible;
+       private int yPosition;
+    
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture() {
         // nothing to do... instance variables are automatically set to null
+       color="blue";
+       isVisible=false;
+       yPosition=60;
     }
+    public void makleVisible(){
+    isVisible=true;
+    draw();}
+    
+       public void makleInVisible(){
+    isVisible=false;
+   }
 
+   public void changeColor(String newColor){
+    color=newColor;
+    draw();}
     /**
      * Draw this picture.
      */
@@ -48,14 +66,23 @@ public class Picture {
         roof.moveHorizontal(60);
         roof.moveVertical(70);
         roof.makeVisible();
-
-        sun = new Circle();
-        sun.changeColor("yellow");
+        
+         sun = new Circle();
+        sun.changeColor("blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+
+        s = new Circle();
+        s.changeColor("yellow");
+        s.moveHorizontal(170);
+        s.moveVertical(-15);
+        s.changeSize(60);
+        s.makeVisible();
     }
+    public void coucher(){
+    sun.slowMoveVertical(300);}
 
     /**
      * Change this picture to black/white display
