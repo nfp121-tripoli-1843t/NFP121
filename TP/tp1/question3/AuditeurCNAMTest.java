@@ -132,27 +132,71 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
         assertEquals("najjar", auditeur1.prenom());
     }
 
-    public void test2()
+ 
+ 
+
+    public void testTtest4()
     {
-        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("sam", "najjar", "sam123");
-        assertEquals("Sam", auditeur1.login());
-        assertEquals("sam123", auditeur1.matricule());
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("najj·‚„r", "eliana", "eliana123");
     }
 
-    public void test3()
+   
+
+  
+
+    public void testt2()
     {
-        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("sam", "najjar", "sam123");
-        assertEquals("sam_n", auditeur1.login());
-        assertEquals("sam123", auditeur1.matricule());
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("sleiman", "simon", "simon123");
+        assertEquals("sleima_s", auditeur1.login());
+        assertEquals("sleiman", auditeur1.nom());
     }
+
+   
+
+    public void test44()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("eliana", "najj„r123"  , "dd");
+        assertEquals("eliana_n", auditeur1.login());
+        assertEquals("dd", auditeur1.matricule());
+        assertEquals("najj„r123", auditeur1.prenom());
+    }
+
+    public void test21()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("r izk", "rÚni", "rizk123");
+        assertEquals("r_izk_r", auditeur1.login());
+        assertEquals("rizk123", auditeur1.matricule());
+        assertEquals("r izk", auditeur1.nom());
+    }
+
+  
 
     public void test4()
     {
-        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("eliana", "najjar", "eliana12");
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("Eliana", "Najjar", "eliana123");
         assertEquals("eliana_n", auditeur1.login());
-        assertEquals("eliana", auditeur1.matricule());
+        assertEquals("eliana123", auditeur1.matricule());
+        assertEquals("Eliana", auditeur1.nom());
+    }
+
+    public void test5()
+    {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("Najj-ar", "Elinaa", "sm");
+        assertEquals("sm", auditeur1.matricule());
+        assertEquals("najj_a_e", auditeur1.login());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

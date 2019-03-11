@@ -24,7 +24,7 @@ public class Picture {
      private String color;
     private boolean isVisible;
        private int yPosition;
-    
+    private Circle terre;
 
     /**
      * Constructor for objects of class Picture
@@ -76,13 +76,22 @@ public class Picture {
 
         s = new Circle();
         s.changeColor("yellow");
-        s.moveHorizontal(170);
+        s.moveHorizontal(10);
         s.moveVertical(-15);
         s.changeSize(60);
         s.makeVisible();
+        
+        terre=new Circle();
+      terre.changeColor("red");
+      terre.moveHorizontal(170);
+        terre.moveVertical(-10);
+        terre.changeSize(60);
+        terre.makeVisible();
+        
     }
     public void coucher(){
-    sun.slowMoveVertical(300);}
+    if(terre!=null){
+    sun.slowMoveVertical(300);}}
 
     /**
      * Change this picture to black/white display

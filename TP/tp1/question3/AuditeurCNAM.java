@@ -31,6 +31,7 @@ public class AuditeurCNAM {
         this.prenom = prenom;
         this.matricule = matricule;
     }
+   
 
     /**
      * le login au Cnam : 6 premières lettres du nom suivies de la première
@@ -44,6 +45,15 @@ public class AuditeurCNAM {
      * @return le login du Cnam simplifié, sans les adaptations dues aux
      *         homonymes...
      */
+    
+       public String pasdac(String f){
+      String acc="àáâãäåòóôõöùúûüíîïìèéêë";
+        String pasacc="aaaaaaooooouuuuiiiieeee";
+        int l=acc.length();
+        for(int i=0;i<l;i++){
+         f=f.replace(acc.charAt(i),pasacc.charAt(i));}
+         return f;
+    }
     public String login() {
        String no;
        String pr;
@@ -51,9 +61,16 @@ public class AuditeurCNAM {
         pr = this.prenom.substring(0,1);
           no = no.toLowerCase();
         pr = pr.toLowerCase();
+        no=pasdac(no);
+        pr=pasdac(pr);      
+          no=no.replaceAll("-","_");
+        pr=pr.replaceAll("-","_");
+         no=no.replaceAll(" ","_");
+ 
         return no+"_"+pr;
         
     }
+  
 
     /**
      * Lecture du nom de l'auditeur.
