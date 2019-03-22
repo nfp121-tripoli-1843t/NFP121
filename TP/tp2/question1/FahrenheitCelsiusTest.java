@@ -68,7 +68,15 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase {
 		assertEquals("    0 °F -> -17.7 °C ? ", -17.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(0), 0.1);
 		assertEquals("  100 °F -> 37.7 °C ? ", 37.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(100), 0.1);
 		assertEquals(" 2000 °F -> 1093.3 °C ?", 1093.3, question1.FahrenheitCelsius.fahrenheitEnCelsius(2000), 0.1);
-		assertEquals("   54 °F -> 12.2 °C ?", 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
+		assertEquals("   60 °F -> 15.5 °C ?", 15.5, question1.FahrenheitCelsius.fahrenheitEnCelsius(60), 0.1);
+		assertEquals("   33 °F -> 0.5 °C ?", 0.5, 
+			question1.FahrenheitCelsius.fahrenheitEnCelsius(33), 0.1);
+		assertEquals("   400 °F -> 204.4°C ?",204.4, 
+			question1.FahrenheitCelsius.fahrenheitEnCelsius(400), 0.1);
+		assertEquals("   356 °F -> 180.0 °C ?", 180.0, 
+			question1.FahrenheitCelsius.fahrenheitEnCelsius(356), 0.1);
+		assertTrue("0°F < 50°F",question1.FahrenheitCelsius.fahrenheitEnCelsius(0)< 
+			question1.FahrenheitCelsius.fahrenheitEnCelsius(50));
 	}
 	
 }
